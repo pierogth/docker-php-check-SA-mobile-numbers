@@ -7,7 +7,10 @@ A dockerized PHP application that permits to check one or many(with a CSV file) 
 In order to run this application, you need Docker (Version 24 or above) and Docker Compose installed in your system.
 
 # How To Run
-
+Just clone the repository:
+<pre>git clone https://github.com/pierogth/docker-php-check-SA-mobile-numbers.git</pre>
+Then go in the folder of the project:
+<pre>cd docker-php-check-SA-mobile-numbers</pre>
 To launch the app, first of all you have to build the Docker image: open a terminal in the folder where you have cloned this project and type the command:<br>
 <pre>docker build . -t docker-php</pre>
 

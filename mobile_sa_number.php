@@ -11,7 +11,6 @@ class mobileSANumber {
     
     //check if is present +27 prefix, in case not, adding it 
     $lenght = strlen($number);
-    echo $lenght;
     if($lenght==9){
         $number = "+27".$number;
         $this->action=", added +27";
@@ -21,7 +20,6 @@ class mobileSANumber {
     $this->action=", added +";
 
     }
-    echo "\n".$number;
     if( preg_match( "/^\+27[0-9]{9}$/", $number ) ){
         
         $result =  "Valid number";
@@ -32,7 +30,6 @@ class mobileSANumber {
         $this->action="";
     
     }
-    echo "\n".$result;
     echo "<script>
     alert('".$result.$this->action."');
     location='index.html';
@@ -57,10 +54,8 @@ class mobileSANumber {
                           
           //get the nuber typed by the user
           $this->number = $csvAsArray[1];
-          echo $this->number."\n";
           //check if is present +27 prefix, in case not, adding it 
           $lenght = strlen($this->number);
-          echo $lenght;
                             
             if($lenght==9){
                 $this->number = "+27".$this->number;
@@ -84,19 +79,15 @@ class mobileSANumber {
                               
                       }
                           
-                      echo "\n".$this->result;
-                               
                       array_push($outputArray, array($this->number, $this->result, $this->action));
                                 
                       }
                       }
-                        var_dump($outputArray);
-                          
-                          
+                       
                         echo "<script>
                           location='index.html';
                           </script>";
-                          
+                        //clean the output buffer
                         ob_clean();
                           
                         $data=[];
